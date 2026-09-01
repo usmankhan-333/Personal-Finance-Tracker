@@ -514,8 +514,53 @@
 }
 
 @media (max-width: 500px) {
+  /* Keep "Personal Finance Tracker" visible on phone: tighten spacing and
+     drop the redundant Profile action (reachable via the sidebar Settings
+     link) to make room without hiding the brand name. */
+  .navbar {
+    padding: 0 10px;
+  }
+
+  .navbar-brand {
+    font-size: 13px;
+
+    gap: 6px;
+  }
+
   .navbar-brand span:last-child {
+    display: inline;
+  }
+
+  .navbar-logo {
+    font-size: 17px;
+  }
+
+  .navbar-actions {
+    gap: 8px;
+  }
+
+  .theme-toggle-button,
+  .notification-button {
+    width: 36px;
+    height: 36px;
+  }
+
+  .theme-toggle-icon {
+    font-size: 16px;
+  }
+
+  .notification-icon {
+    font-size: 16px;
+  }
+
+  .profile-button {
     display: none;
+  }
+
+  .logout-button {
+    padding: 6px 10px;
+
+    font-size: 12px;
   }
 
   .notification-dropdown {
@@ -527,13 +572,5 @@
 
     width: auto;
     max-height: calc(100vh - 80px);
-  }
-
-  .profile-button {
-    padding: 8px 10px;
-  }
-
-  .logout-button {
-    padding: 8px 10px;
   }
 }
