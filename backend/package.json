@@ -1,0 +1,42 @@
+{
+  "name": "personal-finance-tracker",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A Web-Based Personal Finance Tracker",
+  "main": "backend/app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node backend/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maidawaseem80-hub/Personal-Finance-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maidawaseem80-hub/Personal-Finance-Tracker/issues"
+  },
+  "homepage": "https://github.com/maidawaseem80-hub/Personal-Finance-Tracker#readme",
+  "dependencies": {
+    "@json2csv/node": "^7.0.8",
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "helmet": "^8.3.0",
+    "json2csv": "^6.0.0-alpha.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.9.2",
+    "morgan": "^1.11.0",
+    "nodemailer": "^9.0.5",
+    "pdfkit": "^0.20.1",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

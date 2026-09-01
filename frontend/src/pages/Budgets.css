@@ -1,0 +1,618 @@
+.budgets-page {
+  width: 100%;
+}
+
+/* =========================
+   Header
+========================= */
+
+.budgets-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.budgets-header h1 {
+  margin: 0 0 6px;
+  color: #111827;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.budgets-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+.add-budget-button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 18px;
+  background: #1783c1;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.add-budget-button:hover {
+  background: #0a3c6e;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   Summary Cards
+========================= */
+
+.budget-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.budget-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px;
+  background: #f2f1f1;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.budget-summary-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 11px 24px rgba(0, 0, 0, 0.08);
+}
+
+.budget-summary-icon {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.budget-icon-blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.budget-icon-red {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.budget-icon-green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.budget-summary-card span {
+  display: block;
+  margin-bottom: 6px;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.budget-summary-card h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.budget-positive {
+  color: #16a34a !important;
+}
+
+.budget-negative {
+  color: #dc2626 !important;
+}
+
+/* =========================
+   Budget Cards
+========================= */
+
+.budgets-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.budget-card {
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.budget-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.budget-card-header h2 {
+  margin: 0 0 5px;
+  color: #111827;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.budget-card-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.budget-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.edit-budget-button,
+.delete-budget-button {
+  border: none;
+  border-radius: 6px;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.edit-budget-button {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.edit-budget-button:hover {
+  background: #bfdbfe;
+}
+
+.delete-budget-button {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.delete-budget-button:hover {
+  background: #fecaca;
+}
+
+/* =========================
+   Amount Section
+========================= */
+
+.budget-amount-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.budget-amount-row span {
+  display: block;
+  margin-bottom: 5px;
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.budget-amount-row strong {
+  color: #111827;
+  font-size: 16px;
+}
+
+.budget-total {
+  text-align: right;
+}
+
+/* =========================
+   Progress Bar
+========================= */
+
+.budget-progress-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.budget-progress-track {
+  flex: 1;
+  height: 9px;
+  overflow: hidden;
+  background: #e5e7eb;
+  border-radius: 999px;
+}
+
+.budget-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.budget-progress-fill.safe {
+  background: #16a34a;
+}
+
+.budget-progress-fill.warning {
+  background: #f59e0b;
+}
+
+.budget-progress-fill.over {
+  background: #dc2626;
+}
+
+.budget-percentage {
+  min-width: 42px;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.budget-percentage.safe {
+  color: #16a34a;
+}
+
+.budget-percentage.warning {
+  color: #d97706;
+}
+
+.budget-percentage.over {
+  color: #dc2626;
+}
+
+/* =========================
+   Status
+========================= */
+
+.budget-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.budget-status {
+  font-weight: 700;
+}
+
+.budget-status.safe {
+  color: #16a34a;
+}
+
+.budget-status.warning {
+  color: #d97706;
+}
+
+.budget-status.over {
+  color: #dc2626;
+}
+
+/* =========================
+   Empty State
+========================= */
+
+.no-budgets {
+  grid-column: 1 / -1;
+  padding: 50px 25px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.no-budgets h2 {
+  margin: 0 0 8px;
+  color: #111827;
+  font-size: 20px;
+}
+
+.no-budgets p {
+  margin: 0 0 20px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =========================
+   Modal Overlay
+========================= */
+
+.budget-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.55);
+}
+
+/* =========================
+   Add / Edit Modal
+========================= */
+
+.budget-modal {
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.budget-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 24px 24px 18px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.budget-modal-header h2 {
+  margin: 0 0 5px;
+  color: #111827;
+  font-size: 21px;
+}
+
+.budget-modal-header p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.close-budget-modal-button {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 7px;
+  background: #f3f4f6;
+  color: #4b5563;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.close-budget-modal-button:hover {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+/* =========================
+   Form
+========================= */
+
+.budget-form {
+  padding: 24px;
+}
+
+.budget-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.budget-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 17px;
+}
+
+.budget-form-group label {
+  color: #374151;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.budget-form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.budget-form-group input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.budget-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.save-budget-button,
+.cancel-budget-button,
+.confirm-delete-budget-button {
+  border: none;
+  border-radius: 8px;
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-budget-button {
+  background: #1783c1;
+  color: #ffffff;
+}
+
+.save-budget-button:hover {
+  background: #0a3c6e;
+}
+
+.cancel-budget-button {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.cancel-budget-button:hover {
+  background: #e5e7eb;
+}
+
+/* =========================
+   Delete Modal
+========================= */
+
+.delete-budget-modal {
+  width: 100%;
+  max-width: 420px;
+  padding: 28px;
+  border-radius: 14px;
+  background: #ffffff;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.delete-budget-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: #fee2e2;
+  color: #dc2626;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.delete-budget-modal h2 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 20px;
+}
+
+.delete-budget-modal p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.delete-budget-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.confirm-delete-budget-button {
+  background: #dc2626;
+  color: #ffffff;
+}
+
+.confirm-delete-budget-button:hover {
+  background: #b91c1c;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+  .budget-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .budgets-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .budgets-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .add-budget-button {
+    width: 100%;
+  }
+
+  .budget-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .budget-form-actions,
+  .delete-budget-actions {
+    flex-direction: column-reverse;
+  }
+
+  .save-budget-button,
+  .cancel-budget-button,
+  .confirm-delete-budget-button {
+    width: 100%;
+  }
+
+  .budget-card-header {
+    flex-direction: column;
+  }
+
+  .budget-card-actions {
+    width: 100%;
+  }
+
+  .edit-budget-button,
+  .delete-budget-button {
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .budget-summary-card {
+    padding: 18px;
+  }
+
+  .budget-summary-card h2 {
+    font-size: 19px;
+  }
+
+  .budget-card {
+    padding: 18px;
+  }
+
+  .budget-status-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .budget-total {
+    text-align: right;
+  }
+}
