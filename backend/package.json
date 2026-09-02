@@ -3,23 +3,23 @@
   "version": "1.0.0",
   "type": "module",
   "description": "A Web-Based Personal Finance Tracker",
-  "main": "backend/app.js",
+  "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "start": "node backend/app.js",
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maidawaseem80-hub/Personal-Finance-Tracker.git"
+    "url": "git+https://github.com/usmankhan-333/Personal-Finance-Tracker.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maidawaseem80-hub/Personal-Finance-Tracker/issues"
+    "url": "https://github.com/usmankhan-333/Personal-Finance-Tracker/issues"
   },
-  "homepage": "https://github.com/maidawaseem80-hub/Personal-Finance-Tracker#readme",
+  "homepage": "https://github.com/usmankhan-333/Personal-Finance-Tracker#readme",
   "dependencies": {
     "@json2csv/node": "^7.0.8",
     "bcrypt": "^6.0.0",
